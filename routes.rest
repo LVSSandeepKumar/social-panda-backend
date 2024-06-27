@@ -1,0 +1,49 @@
+GET http://localhost:8000/user
+
+###
+
+POST http://localhost:8000/user
+Content-Type: application/json
+
+{
+    "name" : "Test User",
+    "email" : "test@gmail.com",
+    "image" : "Test Image"
+}
+
+###
+POST http://localhost:8000/post
+Content-Type: application/json
+
+{
+    "postText" : "Test User",
+    "createdAt" : "24785798",
+    "createdBy" : "66791adf1dc5548f33368edc",
+    "imageUrl" : "Test URL"
+}
+
+###
+PUT http://localhost:8000/post/like/667aa923554c5ff7b9105d4b
+Content-Type: application/json
+
+{
+    "userId" : "667aa8911dc5548f33309bc9",
+    "isLiked" : true
+}
+
+###
+POST http://localhost:8000/comment
+Content-Type: application/json
+
+{
+    "commentText" : "Bankai",
+    "createdAt" : "24785798",
+    "createdBy" : "667aa8911dc5548f33309bc9",
+    "post" : "667aa918554c5ff7b9105d49"
+}
+
+###
+DELETE http://localhost:8000/comment/667ce8a7b9f6340e67c4400e 
+
+###
+DELETE  http://localhost:8000/post/667aa918554c5ff7b9105d49
